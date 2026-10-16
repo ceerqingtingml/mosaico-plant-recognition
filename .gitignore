@@ -1,0 +1,9 @@
+build/
+build-sim/
+managed_components/
+.cache/
+.codex-runs/
+.preview/
+sdkconfig
+sdkconfig.old
+sdkconfig.secrets.defaults

@@ -1,0 +1,33 @@
+menu "Mosaico Plant Recognition"
+
+    config QWEN_API_URL
+        string "Qwen VL OpenAI-compatible endpoint"
+        default "https://ws-qmd4p81ygyjosnf8.cn-beijing.maas.aliyuncs.com/compatible-mode/v1/chat/completions"
+
+    config QWEN_API_KEY
+        string "Qwen API key"
+        default ""
+        help
+            Prototype only. This value is embedded in firmware. A production
+            device should call a backend proxy instead.
+
+    config QWEN_MODEL
+        string "Qwen vision model"
+        default "qwen3-vl-plus"
+
+    config QWEN_API_TIMEOUT_MS
+        int "Qwen request timeout (ms)"
+        default 60000
+        range 10000 120000
+
+    config CAMERA_PHOTO_NAND_START_PAGE
+        int "First logical NAND page used for photo storage"
+        default 64
+        range 1 2147483647
+
+    config CAMERA_PHOTO_MAX_COUNT
+        int "Maximum number of photos stored on NAND"
+        default 32
+        range 1 48
+
+endmenu
